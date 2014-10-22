@@ -4,7 +4,7 @@ var React = require('react');
 var app = React.createClass({
   render: function () {
     return (
-      <h1>Yo!</h1>
+      <h1>Yo, React!</h1>
     );
   }
 });

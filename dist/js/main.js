@@ -18661,7 +18661,7 @@ var React = require('react');
 var app = React.createClass({displayName: 'app',
   render: function () {
     return (
-      React.DOM.h1(null, "Yo!")
+      React.DOM.h1(null, "Yo, React!")
     );
   }
 });
