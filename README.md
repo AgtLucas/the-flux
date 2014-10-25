@@ -1,4 +1,1 @@
-the-flux
-========
-
-Flux Architecture
+### Flux Architecture
