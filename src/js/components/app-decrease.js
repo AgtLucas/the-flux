@@ -4,7 +4,7 @@
 var React = require('react');
 var AppActions = require('../actions/app-actions');
 
-var AppDecrease = React.createClass({
+var Decrease = React.createClass({
   handleClick: function () {
     AppActions.decreaseItem(this.props.index);
   },
@@ -15,4 +15,4 @@ var AppDecrease = React.createClass({
   }
 });
 
-module.exports = AppDecrease;
+module.exports = Decrease;

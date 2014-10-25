@@ -4,7 +4,7 @@
 var React = require('react');
 var AppActions = require('../actions/app-actions');
 
-var AppIncrease = React.createClass({
+var Increase = React.createClass({
   handleClick: function () {
     AppActions.increaseItem(this.props.index);
   },
@@ -15,4 +15,4 @@ var AppIncrease = React.createClass({
   }
 });
 
-module.exports = AppIncrease;
+module.exports = Increase;
