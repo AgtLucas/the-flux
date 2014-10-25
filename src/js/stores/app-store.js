@@ -7,9 +7,9 @@ var EventEmitter = require('events').EventEmitter;
 var CHANGE_EVENT = "change";
 
 var _catolog = [
-  {id: 1, title: 'Widget #1', const: 1},
-  {id: 2, title: 'Widget #2', const: 2},
-  {id: 3, title: 'Widget #3', const: 3}
+  {id: 1, title: 'Widget #1', cost: 1},
+  {id: 2, title: 'Widget #2', cost: 2},
+  {id: 3, title: 'Widget #3', cost: 3}
 ];
 
 var _cartItems = [];
@@ -93,7 +93,7 @@ var appStore = merge(EventEmitter.prototype, {
     appStore.emitChange();
 
     return true;
-  });
+  })
 });
 
 module.exports = appStore;

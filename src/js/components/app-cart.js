@@ -36,7 +36,7 @@ var Cart = React.createClass({
             <Increase index={i} />
             <Decrease index={i} />
           </td>
-          <td>${subtotal}</td>
+          <td>{subtotal}</td>
         </tr>
       )
     });
@@ -54,12 +54,12 @@ var Cart = React.createClass({
         <tbody>
           {items}
         </tbody>
-        <tfood>
+        <tfoot>
           <tr>
             <td colSpan="4">Total</td>
-            <td>${total}</td>
+            <td>{total}</td>
           </tr>
-        </tfood>
+        </tfoot>
       </table>
     )
   }
