@@ -10,7 +10,7 @@ var RemoveFromCart = React.createClass({
   },
   render: function () {
     return (
-      <button onClick={this.handleClick}>x</button>
+      <button onClick={this.handleClick}>X</button>
     );
   }
 });
