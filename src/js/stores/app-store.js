@@ -1,6 +1,6 @@
 // App store
 var AppDispatcher = require('../dispatchers/app-dispatcher.js');
-var appConstants = require('../constants/app-constants.js');
+var AppConstants = require('../constants/app-constants.js');
 var merge = require('react/lib/merge');
 var EventEmitter = require('events').EventEmitter;
 
@@ -73,19 +73,19 @@ var appStore = merge(EventEmitter.prototype, {
   dispatcherIndex: AppDispatcher.register(function (playload) {
     var action = playload.action;
     switch(action.actionType) {
-      case appConstants.ADD_ITEM:
+      case AppConstants.ADD_ITEM:
         _addItem(playload.action.item);
         break;
 
-      case appConstants.REMOVE_ITEM:
+      case AppConstants.REMOVE_ITEM:
         _removeItem(playload.action.index);
         break;
 
-      case appConstants.INCREASE_ITEM:
+      case AppConstants.INCREASE_ITEM:
         _increaseItem(playload.action.index);
         break;
 
-      case appConstants.DECREASE_ITEM:
+      case AppConstants.DECREASE_ITEM:
         _decreaseItem(playload.action.index);
         break;
     }
