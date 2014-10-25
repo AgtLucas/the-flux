@@ -19624,50 +19624,50 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":29}],147:[function(require,module,exports){
-var appConstants = require('../constants/app-constants.js');
-var appDispatcher = require('../dispatchers/app-dispatcher.js');
+var AppConstants = require('../constants/app-constants.js');
+var AppDispatcher = require('../dispatchers/app-dispatcher.js');
 
-var appActions = {
+var AppActions = {
 
   addItem: function (item) {
-    appDispatcher.handleViewAction({
-      actionType: appConstants.ADD_ITEM,
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.ADD_ITEM,
       item: item
     });
   },
 
   removeItem: function (index) {
-    appDispatcher.handleViewAction({
-      actionType: appConstants.REMOVE_ITEM,
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.REMOVE_ITEM,
       item: index
     });
   },
 
   increaseItem: function (index) {
-    appDispatcher.handleViewAction({
-      actionType: appConstants.INCREASE_ITEM,
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.INCREASE_ITEM,
       item: index
     });
   },
 
   decreaseItem: function (index) {
-    appDispatcher.handleViewAction({
-      actionType: appConstants.DECREASE_ITEM,
+    AppDispatcher.handleViewAction({
+      actionType: AppConstants.DECREASE_ITEM,
       item: index
     });
   }
 
 };
 
-module.exports = appActions;
+module.exports = AppActions;
 },{"../constants/app-constants.js":149,"../dispatchers/app-dispatcher.js":150}],148:[function(require,module,exports){
 /** @jsx React.DOM */
 var React = require('react');
-var appActions = require('../actions/app-actions.js');
+var AppActions = require('../actions/app-actions.js');
 
 var app = React.createClass({displayName: 'app',
   handleClick: function () {
-    appActions.addItem('This is an item');
+    AppActions.addItem('This is an item');
   },
   render: function () {
     return (
@@ -19689,7 +19689,7 @@ module.exports = {
 var Dispatcher = require('./dispatcher.js');
 var merge = require('react/lib/merge');
 
-var appDispatcher = merge(Dispatcher.prototype, {
+var AppDispatcher = merge(Dispatcher.prototype, {
   handleViewAction: function (action) {
     console.log('action', action);
     this.dispatch({
@@ -19699,7 +19699,7 @@ var appDispatcher = merge(Dispatcher.prototype, {
   }
 });
 
-module.exports = appDispatcher;
+module.exports = AppDispatcher;
 },{"./dispatcher.js":151,"react/lib/merge":132}],151:[function(require,module,exports){
 var Promise = require('es6-promise').Promise;
 var merge = require('react/lib/merge');
