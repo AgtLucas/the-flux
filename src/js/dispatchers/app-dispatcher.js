@@ -2,7 +2,7 @@
 var Dispatcher = require('./dispatcher.js');
 var merge = require('react/lib/merge');
 
-var appDispatcher = merge(Dispatcher.prototype, {
+var AppDispatcher = merge(Dispatcher.prototype, {
   handleViewAction: function (action) {
     console.log('action', action);
     this.dispatch({
@@ -12,4 +12,4 @@ var appDispatcher = merge(Dispatcher.prototype, {
   }
 });
 
-module.exports = appDispatcher;
+module.exports = AppDispatcher;
