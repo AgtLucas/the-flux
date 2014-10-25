@@ -1,5 +1,5 @@
 // App store
-var appDispatcher = require('../dispatchers/app-dispatcher.js');
+var AppDispatcher = require('../dispatchers/app-dispatcher.js');
 var appConstants = require('../constants/app-constants.js');
 var merge = require('react/lib/merge');
 var EventEmitter = require('events').EventEmitter;
@@ -70,7 +70,7 @@ var appStore = merge(EventEmitter.prototype, {
     return _catolog;
   },
 
-  dispatcherIndex: appDispatcher.register(function (playload) {
+  dispatcherIndex: AppDispatcher.register(function (playload) {
     var action = playload.action;
     switch(action.actionType) {
       case appConstants.ADD_ITEM:
